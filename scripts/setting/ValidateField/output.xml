@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181128 15:30:57.432" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<robot generated="20181128 16:42:58.961" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
 <suite source="/Users/cadet/feedreader-test/scripts/setting/ValidateField/ValidateField.robot" id="s1" name="ValidateField">
-<test id="s1-t1" name="ValidateField Setting Modal">
+<test id="s1-t1" name="Validate Setting Modal Title Field">
 <kw name="Open FeedReader With Chrome Browser" library="ValidateFieldKeyword">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,15 +9,15 @@
 <arg>http://localhost:4200/main</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20181128 15:30:57.541" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
-<status status="PASS" endtime="20181128 15:31:00.402" starttime="20181128 15:30:57.541"></status>
+<msg timestamp="20181128 16:42:59.077" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
+<status status="PASS" endtime="20181128 16:43:02.044" starttime="20181128 16:42:59.077"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>1</arg>
+<arg>0.5</arg>
 </arguments>
-<status status="PASS" endtime="20181128 15:31:00.403" starttime="20181128 15:31:00.403"></status>
+<status status="PASS" endtime="20181128 16:43:02.045" starttime="20181128 16:43:02.044"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -25,9 +25,9 @@
 <arg>${settingModalButton}</arg>
 <arg>${timetoWait}</arg>
 </arguments>
-<status status="PASS" endtime="20181128 15:31:02.446" starttime="20181128 15:31:00.403"></status>
+<status status="PASS" endtime="20181128 16:43:03.093" starttime="20181128 16:43:02.045"></status>
 </kw>
-<status status="PASS" endtime="20181128 15:31:02.447" starttime="20181128 15:30:57.541"></status>
+<status status="PASS" endtime="20181128 16:43:03.094" starttime="20181128 16:42:59.077"></status>
 </kw>
 <kw name="Open Setting Modal" library="ValidateFieldKeyword">
 <kw name="Click Element" library="Selenium2Library">
@@ -35,8 +35,8 @@
 <arguments>
 <arg>${settingModalButton}</arg>
 </arguments>
-<msg timestamp="20181128 15:31:02.448" level="INFO">Clicking element 'xpath=//mat-icon[@id='settingButton']'.</msg>
-<status status="PASS" endtime="20181128 15:31:04.559" starttime="20181128 15:31:02.448"></status>
+<msg timestamp="20181128 16:43:03.095" level="INFO">Clicking element 'xpath=//button[@id='settingButton']'.</msg>
+<status status="PASS" endtime="20181128 16:43:04.205" starttime="20181128 16:43:03.094"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -44,35 +44,124 @@
 <arg>${titleInputField}</arg>
 <arg>${timetoWait}</arg>
 </arguments>
-<status status="PASS" endtime="20181128 15:31:06.597" starttime="20181128 15:31:04.559"></status>
+<status status="PASS" endtime="20181128 16:43:05.243" starttime="20181128 16:43:04.206"></status>
 </kw>
-<status status="PASS" endtime="20181128 15:31:06.597" starttime="20181128 15:31:02.447"></status>
+<status status="PASS" endtime="20181128 16:43:05.243" starttime="20181128 16:43:03.094"></status>
 </kw>
-<kw name="Invalid Title Field With Thai Language" library="ValidateFieldKeyword">
+<kw name="Valid Title Field With No URL" library="ValidateFieldKeyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>RobotTestTitle</arg>
+</arguments>
+<msg timestamp="20181128 16:43:05.245" level="INFO">Typing text 'RobotTestTitle' into text field 'xpath=//input[@id='titleInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:06.942" starttime="20181128 16:43:05.244"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>${saveButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:07.971" starttime="20181128 16:43:06.942"></status>
+</kw>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:09.008" starttime="20181128 16:43:07.972"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:10.058" starttime="20181128 16:43:09.009"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:10.058" starttime="20181128 16:43:07.972"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:10.058" starttime="20181128 16:43:05.244"></status>
+</kw>
+<kw name="Valid Title Field With URL" library="ValidateFieldKeyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>RobotTestTitle</arg>
+</arguments>
+<msg timestamp="20181128 16:43:10.060" level="INFO">Typing text 'RobotTestTitle' into text field 'xpath=//input[@id='titleInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:11.701" starttime="20181128 16:43:10.059"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+<arg>RobotTestURL</arg>
+</arguments>
+<msg timestamp="20181128 16:43:11.702" level="INFO">Typing text 'RobotTestURL' into text field 'xpath=//input[@id='feedUrlInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:13.332" starttime="20181128 16:43:11.701"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>${saveButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:14.866" starttime="20181128 16:43:13.332"></status>
+</kw>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:15.905" starttime="20181128 16:43:14.868"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:16.947" starttime="20181128 16:43:15.906"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:16.947" starttime="20181128 16:43:14.867"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:16.947" starttime="20181128 16:43:10.059"></status>
+</kw>
+<kw name="Invalid Title Field Thai Language" library="ValidateFieldKeyword">
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${titleInputField}</arg>
 <arg>ภาษาไทย</arg>
 </arguments>
-<msg timestamp="20181128 15:31:06.599" level="INFO">Typing text 'ภาษาไทย' into text field 'xpath=//input[@id='titleInput']'.</msg>
-<status status="PASS" endtime="20181128 15:31:09.778" starttime="20181128 15:31:06.598"></status>
+<msg timestamp="20181128 16:43:16.949" level="INFO">Typing text 'ภาษาไทย' into text field 'xpath=//input[@id='titleInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:18.582" starttime="20181128 16:43:16.948"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${urlInputField}</arg>
 </arguments>
-<msg timestamp="20181128 15:31:09.779" level="INFO">Clicking element 'xpath=//input[@id='feedUrlInput']'.</msg>
-<status status="PASS" endtime="20181128 15:31:11.849" starttime="20181128 15:31:09.778"></status>
+<msg timestamp="20181128 16:43:18.583" level="INFO">Clicking element 'xpath=//input[@id='feedUrlInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:19.648" starttime="20181128 16:43:18.583"></status>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
 <arg>${errorTitleXpath}</arg>
 </arguments>
-<msg timestamp="20181128 15:31:13.887" level="INFO">Element 'xpath=/html/body/div/div[2]/div/mat-dialog-container/app-setting-modal/div/mat-form-field[1]/div/div[2]/div/mat-error' is displayed.</msg>
-<status status="PASS" endtime="20181128 15:31:13.888" starttime="20181128 15:31:11.850"></status>
+<msg timestamp="20181128 16:43:20.683" level="INFO">Element 'xpath=/html/body/div/div[2]/div/mat-dialog-container/app-setting-modal/div/mat-form-field[1]/div/div[2]/div/mat-error' is displayed.</msg>
+<status status="PASS" endtime="20181128 16:43:20.683" starttime="20181128 16:43:19.649"></status>
 </kw>
 <kw name="Get Text" library="Selenium2Library">
 <doc>Returns the text value of element identified by ``locator``.</doc>
@@ -82,8 +171,8 @@
 <assign>
 <var>${errorToCheck}</var>
 </assign>
-<msg timestamp="20181128 15:31:15.918" level="INFO">${errorToCheck} = Please Input English Only</msg>
-<status status="PASS" endtime="20181128 15:31:15.918" starttime="20181128 15:31:13.888"></status>
+<msg timestamp="20181128 16:43:21.712" level="INFO">${errorToCheck} = Please input english only</msg>
+<status status="PASS" endtime="20181128 16:43:21.712" starttime="20181128 16:43:20.683"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -91,34 +180,237 @@
 <arg>${errorToCheck}</arg>
 <arg>${errorTitleWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181128 15:31:15.919" starttime="20181128 15:31:15.919"></status>
+<status status="PASS" endtime="20181128 16:43:21.713" starttime="20181128 16:43:21.713"></status>
 </kw>
 <kw name="Element Should Be Disabled" library="Selenium2Library">
 <doc>Verifies that element identified with ``locator`` is disabled.</doc>
 <arguments>
 <arg>${saveButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181128 15:31:17.956" starttime="20181128 15:31:15.919"></status>
+<status status="PASS" endtime="20181128 16:43:22.738" starttime="20181128 16:43:21.713"></status>
 </kw>
-<status status="PASS" endtime="20181128 15:31:17.956" starttime="20181128 15:31:06.598"></status>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:23.778" starttime="20181128 16:43:22.739"></status>
 </kw>
-<status status="PASS" endtime="20181128 15:31:17.957" critical="yes" starttime="20181128 15:30:57.540"></status>
-</test>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:24.810" starttime="20181128 16:43:23.778"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:24.810" starttime="20181128 16:43:22.739"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:24.810" starttime="20181128 16:43:16.948"></status>
+</kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20181128 15:31:19.035" starttime="20181128 15:31:17.958"></status>
+<status status="PASS" endtime="20181128 16:43:25.382" starttime="20181128 16:43:24.811"></status>
 </kw>
-<status status="PASS" endtime="20181128 15:31:19.035" starttime="20181128 15:30:57.434"></status>
+<status status="PASS" endtime="20181128 16:43:25.382" critical="yes" starttime="20181128 16:42:59.076"></status>
+</test>
+<test id="s1-t2" name="Validate Setting Modal With Invalid URL">
+<kw name="Open FeedReader With Chrome Browser" library="ValidateFieldKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:4200/main</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181128 16:43:25.384" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
+<status status="PASS" endtime="20181128 16:43:28.764" starttime="20181128 16:43:25.384"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:28.766" starttime="20181128 16:43:28.765"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${settingModalButton}</arg>
+<arg>${timetoWait}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:29.799" starttime="20181128 16:43:28.766"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:29.800" starttime="20181128 16:43:25.384"></status>
+</kw>
+<kw name="Open Setting Modal" library="ValidateFieldKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${settingModalButton}</arg>
+</arguments>
+<msg timestamp="20181128 16:43:29.801" level="INFO">Clicking element 'xpath=//button[@id='settingButton']'.</msg>
+<status status="PASS" endtime="20181128 16:43:30.914" starttime="20181128 16:43:29.801"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${timetoWait}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:31.945" starttime="20181128 16:43:30.915"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:31.946" starttime="20181128 16:43:29.800"></status>
+</kw>
+<kw name="Valid URL Field With No Title" library="ValidateFieldKeyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+<arg>RobotTestURL</arg>
+</arguments>
+<msg timestamp="20181128 16:43:31.947" level="INFO">Typing text 'RobotTestURL' into text field 'xpath=//input[@id='feedUrlInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:33.648" starttime="20181128 16:43:31.947"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>${saveButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:34.677" starttime="20181128 16:43:33.648"></status>
+</kw>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:35.719" starttime="20181128 16:43:34.678"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:36.760" starttime="20181128 16:43:35.719"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:36.761" starttime="20181128 16:43:34.678"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:36.761" starttime="20181128 16:43:31.946"></status>
+</kw>
+<kw name="URL Field Thai Language" library="ValidateFieldKeyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+<arg>ภาษาไทย</arg>
+</arguments>
+<msg timestamp="20181128 16:43:36.762" level="INFO">Typing text 'ภาษาไทย' into text field 'xpath=//input[@id='feedUrlInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:38.385" starttime="20181128 16:43:36.762"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>${saveButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:39.409" starttime="20181128 16:43:38.386"></status>
+</kw>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:40.458" starttime="20181128 16:43:39.411"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:41.510" starttime="20181128 16:43:40.459"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:41.511" starttime="20181128 16:43:39.409"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:41.511" starttime="20181128 16:43:36.761"></status>
+</kw>
+<kw name="URL Field Thai Language With Valid Title" library="ValidateFieldKeyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+<arg>ภาษาไทย</arg>
+</arguments>
+<msg timestamp="20181128 16:43:41.512" level="INFO">Typing text 'ภาษาไทย' into text field 'xpath=//input[@id='feedUrlInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:43.105" starttime="20181128 16:43:41.512"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>RobotTitle</arg>
+</arguments>
+<msg timestamp="20181128 16:43:43.106" level="INFO">Typing text 'RobotTitle' into text field 'xpath=//input[@id='titleInput']'.</msg>
+<status status="PASS" endtime="20181128 16:43:44.705" starttime="20181128 16:43:43.105"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>${saveButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:46.236" starttime="20181128 16:43:44.706"></status>
+</kw>
+<kw name="Clear Input Text Method" library="ValidateFieldKeyword">
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${urlInputField}</arg>
+</arguments>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:47.271" starttime="20181128 16:43:46.238"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${urlInputField}</arg>
+</arguments>
+<status status="PASS" endtime="20181128 16:43:48.310" starttime="20181128 16:43:47.272"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:48.311" starttime="20181128 16:43:46.237"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:48.311" starttime="20181128 16:43:41.511"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181128 16:43:48.874" starttime="20181128 16:43:48.311"></status>
+</kw>
+<status status="PASS" endtime="20181128 16:43:48.874" critical="yes" starttime="20181128 16:43:25.383"></status>
+</test>
+<status status="PASS" endtime="20181128 16:43:48.876" starttime="20181128 16:42:58.969"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="ValidateField" pass="1">ValidateField</stat>
+<stat fail="0" id="s1" name="ValidateField" pass="2">ValidateField</stat>
 </suite>
 </statistics>
 <errors>
