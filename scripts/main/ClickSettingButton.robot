@@ -2,16 +2,20 @@
 Library     Selenium2Library
 
 *** Variables ***
-${URL}      
+${URL}
 
 *** Test Case ***
-Open FeedReader Page
-        Open FeedReader
-
+Click Setting Button
+        Open FeedReader 
+        Click Setting Button
 
 *** Keywords ***
-Open FeedReader
+Open FeedReader 
         Open Browser                ${URL}      browser=chrome
         Maximize Browser Window
         Sleep                       3
+
+Click Setting Button
+        Click Element
+        Sleep                       5
         [Teardown]                  Close Browser
