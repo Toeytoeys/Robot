@@ -11,4 +11,3 @@ ${linkFeedTitleThird}       xpath=/html/body/app-root/app-main/div/div[2]/div[2]
 ${btnSetting}               xpath=//*[@id="settingButton"]
 
 ${wait}                     5
-
