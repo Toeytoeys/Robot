@@ -10,4 +10,4 @@ Suite Teardown    Close Browser
 
 Go To New Page
     Open FeedReader
-    Should Be Equal As Strings      ${listMenuFirst}        ${textdefaultMenu}
+    Check Default Menu

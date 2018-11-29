@@ -15,6 +15,7 @@ Go To Setting Page
     Wait Until Element Is Visible       ${titleInputField}      ${timetoWait}
 
 Check Default Menu
-
+    ${checkTextMenu}    Get Text    ${listMenuFirst}
+    Should Be Equal As Strings    ${checkTextMenu}    ${textdefaultMenu}
 
 
