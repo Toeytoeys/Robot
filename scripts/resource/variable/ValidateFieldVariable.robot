@@ -1,3 +1,4 @@
+
 *** Settings ***
 
 Library    Selenium2Library
@@ -19,3 +20,4 @@ ${b}                        Save
 ${d}                        No
 ${f}                        Yes
 ${h}                        Close
+${menuList}                 xpath=/html/body/app-root/app-main/div/div[2]/div[1]/app-menu-block-list/div[1]/app-menu-block/mat-card
