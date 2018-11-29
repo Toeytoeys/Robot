@@ -21,3 +21,6 @@ Check Default Menu
 Click Link To New Page
     Wait Until Element Is Visible    ${listMenuFirst}
     Click Element    ${linkFeedTitleFirst}
+
+Check Sort Menu A TO Z
+    
