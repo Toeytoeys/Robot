@@ -2,7 +2,6 @@
 
 Library    Selenium2Library
 Resource    ../../resource/keyword/ValidateFieldKeyword.robot
-Resource    ../../resource/repository/ValidateFieldRepo.robot
 
 *** Test Case ***
 
