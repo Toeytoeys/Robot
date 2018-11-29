@@ -6,7 +6,7 @@ Resource    ../../resource/repository/ValidateFieldRepo.robot
 
 *** Test Case ***
 
-Validate Setting Modal Title Field
+Validate Setting Modal Title Input Field
     Open FeedReader With Chrome Browser
     Open Setting Modal
     Valid Title Field With No URL
@@ -14,7 +14,7 @@ Validate Setting Modal Title Field
     Invalid Title Field Thai Language
     [Teardown]    Close Browser
 
-Validate Setting Modal With Invalid URL
+Validate Setting Modal URL Input Field
     Open FeedReader With Chrome Browser
     Open Setting Modal
     Valid URL Field With No Title
