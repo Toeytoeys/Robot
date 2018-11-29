@@ -11,4 +11,4 @@ ${linkFeedTitleFirst}       xpath=/html/body/app-root/app-main/div/div[2]/div[2]
 ${linkFeedTitleSecond}      xpath=/html/body/app-root/app-main/div/div[2]/div[2]/app-feed-block-list/div[2]/app-feed-block/mat-card/a
 ${linkFeedTitleThird}       xpath=/html/body/app-root/app-main/div/div[2]/div[2]/app-feed-block-list/div[3]/app-feed-block/mat-card/a
 
-${textdefaultMenu}              BBC
+${textdefaultMenu}          BBC
