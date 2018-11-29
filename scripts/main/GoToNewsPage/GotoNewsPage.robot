@@ -8,5 +8,6 @@ Suite Teardown    Close Browser
 
 *** Test Case ***
 
+Go To New Page
     Open FeedReader
-    Should Be Equal As Strings      ${textdefaultMenu}      ${listMenuFirst}
+    Should Be Equal As Strings      ${listMenuFirst}        ${textdefaultMenu}
