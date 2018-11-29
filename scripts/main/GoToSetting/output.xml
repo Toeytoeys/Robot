@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181129 18:14:41.193" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Users\Administrator\Desktop\lab\feedreader-test\scripts\main\GoToSetting\GoToSetting.robot" id="s1" name="GoToSetting">
+<test id="s1-t1" name="Go To Setting Page">
+<kw name="Open FeedReader" library="MainValidateFieldKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${urlLocal}</arg>
+<arg>${chromeBrowser}</arg>
+</arguments>
+<msg timestamp="20181129 18:14:41.558" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
+<status status="PASS" endtime="20181129 18:14:50.264" starttime="20181129 18:14:41.557"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${settingModalButton}</arg>
+</arguments>
+<status status="PASS" endtime="20181129 18:14:50.334" starttime="20181129 18:14:50.265"></status>
+</kw>
+<status status="PASS" endtime="20181129 18:14:50.334" starttime="20181129 18:14:41.556"></status>
+</kw>
+<kw name="Go To Setting Page" library="MainValidateFieldKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${settingModalButton}</arg>
+</arguments>
+<msg timestamp="20181129 18:14:50.335" level="INFO">Clicking element 'xpath=//*[@id='settingButton']'.</msg>
+<status status="PASS" endtime="20181129 18:14:50.635" starttime="20181129 18:14:50.335"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${titleInputField}</arg>
+<arg>${timetoWait}</arg>
+</arguments>
+<status status="PASS" endtime="20181129 18:14:50.719" starttime="20181129 18:14:50.636"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181129 18:14:53.719" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181129 18:14:53.719" starttime="20181129 18:14:50.719"></status>
+</kw>
+<status status="PASS" endtime="20181129 18:14:53.719" starttime="20181129 18:14:50.335"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181129 18:14:56.835" starttime="20181129 18:14:53.720"></status>
+</kw>
+<status status="PASS" endtime="20181129 18:14:56.836" critical="yes" starttime="20181129 18:14:41.555"></status>
+</test>
+<status status="PASS" endtime="20181129 18:14:56.840" starttime="20181129 18:14:41.199"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="GoToSetting" pass="1">GoToSetting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
