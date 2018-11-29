@@ -1,9 +1,9 @@
 *** Settings ***
 
-Library      Selenuim2Library
+Library      Selenium2Library
 Library      Collections
-Resource     ../resource/repository/ValidateFieldRepo.robot
-Resource     ../resource/repository/DefaultSettingPageWithNoData.robot
+Resource     ../../resource/repository/ValidateFieldRepo.robot
+Resource     ../../resource/variable/ValidateFieldVariable.robot
 
 *** Keywords ***
 
@@ -14,6 +14,7 @@ Open FeedReader
 Go To Setting Page  
     Click Element       ${settingModalButton}
     Wait Until Element Is Visible       ${titleInputField}      ${timetoWait}
+    Sleep     3
 
 Check Default Menu
     ${checkTextMenu}    Get Text    ${listMenuFirst}
