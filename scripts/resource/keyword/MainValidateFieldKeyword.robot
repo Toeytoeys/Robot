@@ -24,7 +24,7 @@ Click Link To New Page
     Click Element    ${linkFeedTitleFirst}
 
 #Draft For Check Sort List
-Make List
+Check Sort Menu A TO Z
     :FOR ${index}   IN RANGE    1   ${count}   
     \   Append To List   ${L1}  ${value}
     Sort List   ${L1}
