@@ -7,7 +7,7 @@ Resource    ../repository/ValidateFieldRepo.robot
 *** Keywords ***
 
 Open FeedReader With Chrome Browser
-    Open Browser    http://localhost:4200/main    chrome
+    Open Browser    ${urlLocal}    ${chromeBrowser}
     Set Selenium Speed    0.5
     Wait Until Element Is Visible    ${settingModalButton}    ${timetoWait}
 
