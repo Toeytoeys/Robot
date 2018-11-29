@@ -2,7 +2,7 @@
 
 Library    Selenium2Library
 Resource    ../repository/ValidateFieldRepo.robot
-
+Resource    ../variable/ValidateFieldVariable.robot
 
 *** Keywords ***
 
@@ -16,23 +16,23 @@ Open Setting Modal
     Wait Until Element Is Visible    ${titleInputField}    ${timetoWait}
 
 Valid Title Field With No URL
-    Input Text    ${titleInputField}    RobotTestTitle
+    Input Text    ${titleInputField}    ${dataTitle1}
     Element Should Be Disabled    ${saveButton}
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
 
 Valid URL Field With No Title
-    Input Text    ${urlInputField}    RobotTestURL
+    Input Text    ${urlInputField}    ${dataURL1}
     Element Should Be Disabled    ${saveButton}
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
 
 Valid Title Field With URL
-    Input Text    ${titleInputField}    RobotTestTitle
-    Input Text    ${urlInputField}    RobotTestURL
+    Input Text    ${titleInputField}    ${dataTitle1}
+    Input Text    ${urlInputField}    ${dataURL1}
     Element Should Be Enabled    ${saveButton}
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
     
 Invalid Title Field Thai Language
-    Input Text    ${titleInputField}    ภาษาไทย
+    Input Text    ${titleInputField}    ${dataTitle2}
     Click Element    ${urlInputField}
     Element Should Be Visible    ${errorTitleXpath}
     ${errorToCheck}    Get Text    ${errorTitleXpath}
@@ -41,13 +41,13 @@ Invalid Title Field Thai Language
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
 
 URL Field Thai Language 
-    Input Text    ${urlInputField}    ภาษาไทย
+    Input Text    ${urlInputField}    ${dataTitle2}
     Element Should Be Disabled    ${saveButton}
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
 
 URL Field Thai Language With Valid Title
-    Input Text    ${urlInputField}    ภาษาไทย
-    Input Text    ${titleInputField}    RobotTitle
+    Input Text    ${urlInputField}    ${dataTitle2}
+    Input Text    ${titleInputField}    ${dataTitle1}
     Element Should Be Enabled    ${saveButton}
     Clear Input Text Method    ${titleInputField}    ${urlInputField}
 

@@ -8,3 +8,4 @@ Suite Teardown    Close Browser
 *** Test Cases ****
 SortMenuInMainPage
     Open FeedReader
+    Check Sort Menu A TO Z

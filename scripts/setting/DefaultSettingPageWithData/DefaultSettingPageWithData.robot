@@ -11,13 +11,12 @@ Suite Teardown    Close Browser
 
 *** Test Case ***
 
-Open Setting page with no feed data should show no data massage
+Open setting page with no feed data should show data massage
     Verify going to page
     Verify feed no data
 Save button should disable
     Validate disable button                ${saveButton}
 Title field should showed and can input text
-
     Verify Input Text Should Be Visible    ${titleInputField}
 FeedURL field should showed and can input text
     Verify Input Text Should Be Visible    ${urlInputField}

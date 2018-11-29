@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library      Selenuim2Library
+Library      Collections
 Resource     ../resource/repository/ValidateFieldRepo.robot
 Resource     ../resource/repository/DefaultSettingPageWithNoData.robot
 
@@ -22,5 +23,8 @@ Click Link To New Page
     Wait Until Element Is Visible    ${listMenuFirst}
     Click Element    ${linkFeedTitleFirst}
 
+#Draft For Check Sort List
 Check Sort Menu A TO Z
-    
+    :FOR ${index}   IN RANGE    1   ${count}   
+    \   Append To List   ${L1}  ${value}
+    Sort List   ${L1}

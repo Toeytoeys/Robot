@@ -10,3 +10,4 @@ Suite Teardown    Close Browser
 Go To New Page
     Open FeedReader
     Click Link To New Page
+    
