@@ -1,13 +1,12 @@
 *** Settings ***
 
-Library           Selenium2Library
-Resource          ../resource/keyword/MainValidateFieldKeyword.robot
+Library    Selenium2Library
+Resource    ../
 Suite Setup       Open Main Page
 Suite Teardown    Close Browser
 
-
-*** Test Case ***
+*** Test Cases ***
 
 Go To New Page
     Open FeedReader
-    Check Default Menu
+    Click Link To New Page

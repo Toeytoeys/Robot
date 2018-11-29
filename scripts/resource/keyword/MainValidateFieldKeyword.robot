@@ -18,4 +18,6 @@ Check Default Menu
     ${checkTextMenu}    Get Text    ${listMenuFirst}
     Should Be Equal As Strings    ${checkTextMenu}    ${textdefaultMenu}
 
-
+Click Link To New Page
+    Wait Until Element Is Visible    ${listMenuFirst}
+    Click Element    ${linkFeedTitleFirst}
