@@ -6,6 +6,7 @@ Suite Setup       Open Main Page
 Suite Teardown    Close Browser
 
 
-Test Setup
+*** Test Case ***
 
-    Should Be Equal As Strings
+    Open FeedReader
+    Should Be Equal As Strings      ${textdefaultMenu}      ${listMenuFirst}
