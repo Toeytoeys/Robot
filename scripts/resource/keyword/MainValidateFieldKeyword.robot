@@ -1,8 +1,15 @@
 *** Settings ***
 Library    Selenuim2Library
-Resource    ../../resourcemain/
+Resource    ../resource/repository/ValidateFieldRepo.robot
+Resource    ../resource/repository/DefaultSettingPageWithNoData.robot
 
 *** Keywords ***
 Open FeedReader
-    Open Browser    
+    Open Browser        ${urlLocal}     ${chromeBrowser}
+    Wait Until Element Is Visible       ${settingModalButton}
     
+Go To Setting Page  
+    Click Element       ${settingModalButton}
+    Wait Until Element Is Visible       ${titleInputField}      ${timetoWait}
+
+
