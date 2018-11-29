@@ -1,15 +1,16 @@
 *** Settings ***
 Library    Selenium2Library
+Resource    ../variable/ValidateFieldVariable.robot
 
 *** Keywords ***
 Open Feed Reader
-    Open Browser        http://localhost:4200/main      chrome
+    Open Browser        ${urlLocal}      chrome
 
 Check title
     Title Should Be     FeedReader
 
 Check NoData
-    Element Should Not Be Visible       xpath=/html/body/app-root/app-main/div/div[2]/div[1]/app-menu-block-list/div[1]/app-menu-block/mat-card
+    Element Should Not Be Visible       ${menuList}
 
 
 
