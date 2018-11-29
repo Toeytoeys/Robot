@@ -1,7 +1,7 @@
 *** Settings ***
 
 Library     Selenium2Library
-Resource    ../../resource/repository/DefaultSettingPageWithNoData.robot
+Resource    ../../resource/repository/CommonSettingRepo.robot
 
 *** Keywords ***
 
