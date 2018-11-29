@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181129 17:48:13.653" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<robot generated="20181129 18:14:41.193" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
 <suite source="C:\Users\Administrator\Desktop\lab\feedreader-test\scripts\main\GoToSetting\GoToSetting.robot" id="s1" name="GoToSetting">
 <test id="s1-t1" name="Go To Setting Page">
 <kw name="Open FeedReader" library="MainValidateFieldKeyword">
@@ -9,17 +9,17 @@
 <arg>${urlLocal}</arg>
 <arg>${chromeBrowser}</arg>
 </arguments>
-<msg timestamp="20181129 17:48:13.884" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
-<status status="PASS" endtime="20181129 17:48:22.031" starttime="20181129 17:48:13.883"></status>
+<msg timestamp="20181129 18:14:41.558" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
+<status status="PASS" endtime="20181129 18:14:50.264" starttime="20181129 18:14:41.557"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${settingModalButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181129 17:48:22.091" starttime="20181129 17:48:22.034"></status>
+<status status="PASS" endtime="20181129 18:14:50.334" starttime="20181129 18:14:50.265"></status>
 </kw>
-<status status="PASS" endtime="20181129 17:48:22.092" starttime="20181129 17:48:13.883"></status>
+<status status="PASS" endtime="20181129 18:14:50.334" starttime="20181129 18:14:41.556"></status>
 </kw>
 <kw name="Go To Setting Page" library="MainValidateFieldKeyword">
 <kw name="Click Element" library="Selenium2Library">
@@ -27,8 +27,8 @@
 <arguments>
 <arg>${settingModalButton}</arg>
 </arguments>
-<msg timestamp="20181129 17:48:22.093" level="INFO">Clicking element 'xpath=//*[@id='settingButton']'.</msg>
-<status status="PASS" endtime="20181129 17:48:22.324" starttime="20181129 17:48:22.093"></status>
+<msg timestamp="20181129 18:14:50.335" level="INFO">Clicking element 'xpath=//*[@id='settingButton']'.</msg>
+<status status="PASS" endtime="20181129 18:14:50.635" starttime="20181129 18:14:50.335"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -36,13 +36,25 @@
 <arg>${titleInputField}</arg>
 <arg>${timetoWait}</arg>
 </arguments>
-<status status="PASS" endtime="20181129 17:48:22.385" starttime="20181129 17:48:22.325"></status>
+<status status="PASS" endtime="20181129 18:14:50.719" starttime="20181129 18:14:50.636"></status>
 </kw>
-<status status="PASS" endtime="20181129 17:48:22.385" starttime="20181129 17:48:22.093"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181129 18:14:53.719" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181129 18:14:53.719" starttime="20181129 18:14:50.719"></status>
 </kw>
-<status status="PASS" endtime="20181129 17:48:22.386" critical="yes" starttime="20181129 17:48:13.882"></status>
+<status status="PASS" endtime="20181129 18:14:53.719" starttime="20181129 18:14:50.335"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181129 18:14:56.835" starttime="20181129 18:14:53.720"></status>
+</kw>
+<status status="PASS" endtime="20181129 18:14:56.836" critical="yes" starttime="20181129 18:14:41.555"></status>
 </test>
-<status status="PASS" endtime="20181129 17:48:22.389" starttime="20181129 17:48:13.658"></status>
+<status status="PASS" endtime="20181129 18:14:56.840" starttime="20181129 18:14:41.199"></status>
 </suite>
 <statistics>
 <total>
@@ -56,40 +68,5 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20181129 17:48:13.858" level="ERROR">Error in file 'C:\Users\Administrator\Desktop\lab\feedreader-test\scripts\resource\keyword\MainValidateFieldKeyword.robot': Importing test library 'Selenuim2Library' failed: ImportError: No module named Selenuim2Library
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Windows\system32\python27.zip
-  c:\python27\DLLs
-  c:\python27\lib
-  c:\python27\lib\plat-win
-  c:\python27\lib\lib-tk
-  c:\python27
-  c:\python27\lib\site-packages
-  c:\python27\lib\site-packages\robotframework_appiumlibrary-1.4.1-py2.7.egg
-  c:\python27\lib\site-packages\pytest_pythonpath-0.7.1-py2.7.egg
-  c:\python27\lib\site-packages\pytest_xdist-1.22.2-py2.7.egg
-  c:\python27\lib\site-packages\pytest_cov-2.5.1-py2.7.egg
-  c:\python27\lib\site-packages\sauceclient-1.0.0-py2.7.egg
-  c:\python27\lib\site-packages\mock-1.0.1-py2.7.egg
-  c:\python27\lib\site-packages\pytest-3.5.1-py2.7.egg
-  c:\python27\lib\site-packages\pytest_forked-0.2-py2.7.egg
-  c:\python27\lib\site-packages\execnet-1.5.0-py2.7.egg
-  c:\python27\lib\site-packages\coverage-4.5.1-py2.7-win32.egg
-  c:\python27\lib\site-packages\colorama-0.3.9-py2.7.egg
-  c:\python27\lib\site-packages\funcsigs-1.0.2-py2.7.egg
-  c:\python27\lib\site-packages\pluggy-0.6.0-py2.7.egg
-  c:\python27\lib\site-packages\more_itertools-4.1.0-py2.7.egg
-  c:\python27\lib\site-packages\attrs-18.1.0-py2.7.egg
-  c:\python27\lib\site-packages\six-1.11.0-py2.7.egg
-  c:\python27\lib\site-packages\py-1.5.3-py2.7.egg
-  c:\python27\lib\site-packages\apipkg-1.4-py2.7.egg
-  c:\python27\lib\site-packages\win32
-  c:\python27\lib\site-packages\win32\lib
-  c:\python27\lib\site-packages\Pythonwin
-  c:\python27\lib\site-packages
-  c:\python27\lib\site-packages\wx-2.8-msw-unicode</msg>
-<msg timestamp="20181129 17:48:13.875" level="ERROR">Error in file 'C:\Users\Administrator\Desktop\lab\feedreader-test\scripts\resource\keyword\MainValidateFieldKeyword.robot': Resource file '..\..\resource\repository\DefaultSettingPageWithNoData.robot' does not exist.</msg>
 </errors>
 </robot>
