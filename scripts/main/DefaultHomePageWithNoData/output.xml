@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181129 16:09:22.238" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite source="/Users/cadet/feedreader-test/scripts/main/DefaultHomePageWithNoData/DefaultHomePageWithNoData.robot" id="s1" name="DefaultHomePageWithNoData">
+<test id="s1-t1" name="Check Open Feed Reader">
+<kw name="Open Feed Reader" library="DefualtHomePageWithNoDataKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:4200/main</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181129 16:09:22.479" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/main'.</msg>
+<status status="PASS" endtime="20181129 16:09:25.419" starttime="20181129 16:09:22.479"></status>
+</kw>
+<status status="PASS" endtime="20181129 16:09:25.419" starttime="20181129 16:09:22.479"></status>
+</kw>
+<kw name="Check title" library="DefualtHomePageWithNoDataKeyword">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>FeedReader</arg>
+</arguments>
+<msg timestamp="20181129 16:09:25.484" level="INFO">Page title is 'FeedReader'.</msg>
+<status status="PASS" endtime="20181129 16:09:25.485" starttime="20181129 16:09:25.420"></status>
+</kw>
+<status status="PASS" endtime="20181129 16:09:25.485" starttime="20181129 16:09:25.420"></status>
+</kw>
+<status status="PASS" endtime="20181129 16:09:25.485" critical="yes" starttime="20181129 16:09:22.478"></status>
+</test>
+<test id="s1-t2" name="Defualt Page">
+<kw name="Check NoData" library="DefualtHomePageWithNoDataKeyword">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>xpath=/html/body/app-root/app-main/div/div[2]/div[1]/app-menu-block-list/div[1]/app-menu-block/mat-card</arg>
+</arguments>
+<msg timestamp="20181129 16:09:25.502" level="INFO">Element 'xpath=/html/body/app-root/app-main/div/div[2]/div[1]/app-menu-block-list/div[1]/app-menu-block/mat-card' did not exist.</msg>
+<status status="PASS" endtime="20181129 16:09:25.502" starttime="20181129 16:09:25.487"></status>
+</kw>
+<status status="PASS" endtime="20181129 16:09:25.502" starttime="20181129 16:09:25.487"></status>
+</kw>
+<status status="PASS" endtime="20181129 16:09:25.502" critical="yes" starttime="20181129 16:09:25.486"></status>
+</test>
+<status status="PASS" endtime="20181129 16:09:25.503" starttime="20181129 16:09:22.240"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="DefaultHomePageWithNoData" pass="2">DefaultHomePageWithNoData</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
