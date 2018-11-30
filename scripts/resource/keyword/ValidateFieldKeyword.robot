@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library    Selenium2Library
+
 Resource    ../repository/ValidateFieldRepo.robot
 Resource    ../variable/ValidateFieldVariable.robot
 

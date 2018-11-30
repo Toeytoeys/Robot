@@ -1,15 +1,15 @@
 *** Settings ***
 
-Library     Selenium2Library
+Library    Selenium2Library
+Resource    ../../resource/variable/ValidateFieldVariable.robot
 Resource    ../../resource/keyword/SaveFeedSuccess.robot
-Resource    ../../resource/CommonSettingRepo.robot
-Resource    ../../resource/ValidateFieldVariable.robot
-
+Resource    ../../resource/repository/CommonSettingRepo.robot
+Resource    ../../resource/repository/ValidateFieldRepo.robot
 
 *** Test Cases ***
 
 Openweb
-
+    
     Open Browser    ${urlLocal}    ${chromeBrowser}
     Maximize Browser Window
     Click Button Setting

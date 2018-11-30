@@ -2,28 +2,28 @@
 
 Library    Selenium2Library
 Resource    ../../resource/keyword/SaveFeedSuccess.robot
-Resource    ../../resource/CommonSettingRepo.robot
-Resource    ../../resource/ValidateFieldVariable.robot
+Resource    ../../resource/repository/CommonSettingRepo.robot
+Resource    ../../resource/repository/ValidateFieldRepo.robot
 
 *** Keywords ***
 
 Click Button Setting
 
-    Set Selenium Speed    0.5
+    Set Selenium Speed    1
     Click Element    ${settingModalButton}
     Wait Until Page Contains    Setting
 
 Input Title
 
     Input Text    ${titleInputField}     ${inputTitleText}
-    Wait Until Element Is Visible    ${Input_Title}
+    Wait Until Element Is Visible    ${titleInputField}
     Element Should Be Visible   ${titleInputField}     ${inputTitleText}
 
 Input URL
 
     Input Text    ${urlInputField}    ${inputFeedtext}
-    Wait Until Element Is Visible    ${Input_Title}
-    Element Should Be Visible    ${urlInputField}    ${Input_Feed_text}
+    Wait Until Element Is Visible    ${urlInputField}
+    Element Should Be Visible    ${urlInputField}    ${inputFeedtext}
 
 
 Click button save

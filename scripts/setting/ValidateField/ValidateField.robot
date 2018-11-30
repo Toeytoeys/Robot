@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library    Selenium2Library
+
 Resource    ../../resource/keyword/ValidateFieldKeyword.robot
 
 *** Test Case ***
