@@ -13,12 +13,7 @@ ${errorURLXpath}            xpath=/html/body/div/div[2]/div/mat-dialog-container
 ${tableHeaderXpath}         xpath=//*[@id='tableHeader_id']
 ${closeModalButton}         xpath=//*[@id='closeButton']
 
-<<<<<<< HEAD
-
-#Confirm Save
-=======
 #Confirm Save and Delete
->>>>>>> Add delete method full functionally
 ${confirmTitle}             xpath=//*[@id='confirmTitleId']
 ${confirmWording}           xpath=//*[@id='confirmWordingId']
 ${confirmYesButton}         xpath=//*[@id='comfirmYesButton']
