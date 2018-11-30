@@ -8,8 +8,9 @@ Open Feed Reader
 
 Check title
     Title Should Be     FeedReader
+    Sleep               3
 
-Check NoData
+Check Empty Page
     Element Should Not Be Visible       ${menuList}
 
 

@@ -3,8 +3,10 @@ Library    Selenium2Library
 Resource    ../../resource/keyword/DefualtHomePageWithNoDataKeyword.robot
 
 *** Test Case ***
-Check Open Feed Reader
+Check Open FeedReader Title should be FeedReader
     Open Feed Reader
     Check title
-Defualt Page
-    Check NoData
+    
+Check HomePage with no data
+    Check Empty Page
+    [tear down]     Close Browser
