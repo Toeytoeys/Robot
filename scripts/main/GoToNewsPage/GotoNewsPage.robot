@@ -1,9 +1,9 @@
 *** Settings ***
 
-Library    Selenium2Library
-Resource    ../
-Suite Setup       Open Main Page
-Suite Teardown    Close Browser
+Library     Selenium2Library
+Resource    ../../resource/keyword/MainValidateFieldKeyword.robot
+# Suite Setup       Open Main Page
+# Suite Teardown    Close Browser
 
 *** Test Cases ***
 
