@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library    Selenium2Library
+Library    MongoDBLibrary
 
 Resource    ../repository/ValidateFieldRepo.robot
 Resource    ../variable/ValidateFieldVariable.robot
@@ -65,3 +66,9 @@ Clear Input Text Method
     Clear Element Text    ${titleInputField}
     Clear Element Text    ${urlInputField}
 
+Delete Data From Table By Query
+    ${MDBDB} =    Set Variable    foo
+    ${MDBColl} =    Set Variable    foo
+    Connect To MongoDB      localhost    4200
+    Remove MongoDB Records    ${MDBDB}    ${MDBColl}    {"title": "WAW"}
+    Disconnect From MongoDB
