@@ -21,3 +21,12 @@ ${d}                        No
 ${f}                        Yes
 ${h}                        Close
 ${menuList}                 xpath=/html/body/app-root/app-main/div/div[2]/div[1]/app-menu-block-list/div[1]/app-menu-block/mat-card
+
+${dbName}                   feedreader
+${dbColl}                   feeds
+${dbPort}                   27017
+${dbLocal}                  localhost
+${jsonData1}                 {"title":"robotMongoDB1","url":"botURL"}
+${jsonData2}                 {"title":"robotMongoDB2","url":"botURL"}
+${jsonData3}                 {"title":"robotMongoDB3","url":"botURL"}
+${jsonData4}                 {"title":"robotMongoDB4","url":"botURL"}

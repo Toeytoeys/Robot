@@ -22,5 +22,3 @@ Validate Setting Modal URL Input Field
     URL Field Thai Language
     URL Field Thai Language With Valid Title
     [Teardown]    Close Browser
-# Check Connect To Database
-#     Delete Data From Table By Query
