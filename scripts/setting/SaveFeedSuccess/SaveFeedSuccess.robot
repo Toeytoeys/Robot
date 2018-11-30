@@ -19,4 +19,5 @@ Openweb
     Click Confirm No Button
     Click button save
     Click Confirm Yes Button
-#    Click Close Button Setting
+    Click Close Button
+    Close Browser
