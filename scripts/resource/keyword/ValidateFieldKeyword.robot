@@ -4,8 +4,9 @@ Library    Selenium2Library
 Library    MongoDBLibrary
 # Library    de.codecentric.robot.mongodblibrary.keywords.MongodbLibrary
 
-Resource    ../repository/ValidateFieldRepo.robot
-Resource    ../variable/ValidateFieldVariable.robot
+Resource    ../../resource/repository/ValidateFieldRepo.robot
+Resource    ../../resource/repository/MainValidateFieldRepo.robot
+Resource    ../../resource/variable/ValidateFieldVariable.robot
 
 *** Keywords ***
 

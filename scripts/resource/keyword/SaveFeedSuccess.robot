@@ -1,9 +1,11 @@
 *** Settings ***
 
 Library    Selenium2Library
+Resource    ../../resource/variable/ValidateFieldVariable.robot
 Resource    ../../resource/keyword/SaveFeedSuccess.robot
 Resource    ../../resource/repository/CommonSettingRepo.robot
 Resource    ../../resource/repository/ValidateFieldRepo.robot
+
 
 *** Keywords ***
 
@@ -44,10 +46,10 @@ Click Confirm Yes Button
     ${e}    Get text    ${confirmYesButton}
     Should be equal    ${e}    ${f}
     Click Element    ${confirmYesButton}
-#    Wait Until Page Contains Element    ${titleName}
+    Wait Until Page Contains    ${titleName}
 
-Click Close Button Setting
+Click Close Button
 
-    Click Element    ${closeModalButton}
     ${g}    Get text    ${closeModalButton}
     Should be equal    ${g}    ${h}
+    Click Element    ${closeModalButton}
