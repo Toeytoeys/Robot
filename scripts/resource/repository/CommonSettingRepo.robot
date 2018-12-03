@@ -13,7 +13,6 @@ ${errorURLXpath}            xpath=/html/body/div/div[2]/div/mat-dialog-container
 ${tableHeaderXpath}         xpath=//*[@id='tableHeader_id']
 ${closeModalButton}         xpath=//*[@id='closeButton']
 
-#Confirm Save and Delete
 ${confirmTitle}             xpath=//*[@id='confirmTitleId']
 ${confirmWording}           xpath=//*[@id='confirmWordingId']
 ${confirmYesButton}         xpath=//*[@id='comfirmYesButton']
