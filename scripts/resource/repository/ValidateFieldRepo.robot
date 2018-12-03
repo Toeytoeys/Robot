@@ -4,6 +4,7 @@ Library    Selenium2Library
 
 *** Variables ***
 
+#Test Commit
 ${settingModalButton}       xpath=//*[@id='settingButton']
 ${titleInputField}          xpath=//*[@id='titleInput']
 ${urlInputField}            xpath=//*[@id='feedUrlInput']
